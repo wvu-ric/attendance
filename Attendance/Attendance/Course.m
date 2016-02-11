@@ -23,9 +23,15 @@
     
     // TODO: Complete this method
     NSString *toReturn = @"";
-    
-    
+    for (int i = 0; i < [self.students count]; i++) {
+        toReturn = [NSString stringWithFormat:@"%@\n%@", toReturn, [self.students[i] description]];
+        
+    }
 
+    
+   
+    
+                         
     return toReturn;
 }
 
