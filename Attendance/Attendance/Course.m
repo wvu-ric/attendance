@@ -20,12 +20,12 @@
 }
 
 -(NSString *)roleCall{
-    
-    // TODO: Complete this method
-    NSString *toReturn = @"";
-    
-    
-
+    //
+    // returning a role call string
+    NSString *toReturn = @"\n\nCourse Roster:";
+    for (int i = 0; i < [self.students count]; i++) {
+        toReturn = [NSString stringWithFormat:@"%@\n%@",toReturn,[self.students[i] description]];
+    }
     return toReturn;
 }
 
