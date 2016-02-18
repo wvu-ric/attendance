@@ -20,14 +20,16 @@
 }
 
 -(NSString *)roleCall{
+ 
+    NSString * s = @"";
     
     // TODO: Complete this method
-    NSString *toReturn = @"";
+    for (Student *student in self.students) {
+        s = [s stringByAppendingString:student.description];
+        s = [s stringByAppendingString:@"\n"];
+    }
     
-    
-
-    return toReturn;
+    return s;
 }
-
 
 @end
