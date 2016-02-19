@@ -22,8 +22,10 @@
 -(NSString *)roleCall{
     
     // TODO: Complete this method
-    NSString *toReturn = @"";
-    
+    NSMutableString *toReturn = [[NSMutableString alloc] init];
+    for (Student *student in _students) {
+        [toReturn appendFormat:@"%@",student];
+    }
     
 
     return toReturn;
