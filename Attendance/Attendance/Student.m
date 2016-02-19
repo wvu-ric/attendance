@@ -13,7 +13,20 @@
 - (NSString *)description
 {
     //TODO: Complete this method
-    return [NSString stringWithFormat:@"%@ %@, #%@", self.firstName, @"",@""];
+    return [NSString stringWithFormat:@"%@ %@, #%@ \n", self.firstName, [self lastName], _studentId]; // Three ways to access the values of the instance variables
+    
+}
+
+-(instancetype)initWithObjectsFirstName: (NSString *) firstName
+                               lastName: (NSString *) lastName
+                              studentId: (NSString *) studentId {
+    self = [super init];
+    if (self) {
+        _firstName = firstName;
+        _lastName = lastName;
+        _studentId = studentId;
+    }
+    return self;
 }
 
 @end

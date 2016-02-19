@@ -18,8 +18,15 @@ int main(int argc, const char * argv[]) {
         Course *codeLab = [[Course alloc]init];
         
         // TODO: Create at least 2 student objects
-        // TODO: Add students to the codeLab Course
+        Student *johnCena = [[Student  alloc] initWithObjectsFirstName:@"John" lastName:@"Cena" studentId:@"900016542"];
+        Student *bernieMac = [[Student alloc] initWithObjectsFirstName:@"Bernie" lastName:@"Mac" studentId:@"900087453"];
+        Student *bigMike = [[Student alloc]
+            initWithObjectsFirstName:@"Big" lastName:@"Mike"
+            studentId:@"900047092"];
         
+        
+        // TODO: Add students to the codeLab Course
+        [codeLab setStudents:[[NSMutableArray alloc] initWithObjects: johnCena, bernieMac, bigMike, nil]];
 
         
         NSLog(@"%@",[codeLab roleCall]);

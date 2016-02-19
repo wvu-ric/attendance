@@ -21,5 +21,8 @@
  
 */
 - (NSString *)description;
+- (instancetype)initWithObjectsFirstName: (NSString *) firstName
+                                lastName: (NSString *) lastName
+                               studentId: (NSString *) studentId;
 
 @end
