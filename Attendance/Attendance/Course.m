@@ -2,8 +2,7 @@
 //  Course.m
 //  Attendance
 //
-//  Created by Ricky Kirkendall on 1/31/16.
-//  Copyright © 2016 CodeLab. All rights reserved.
+//  Created by Austin Clark 3/1/16
 //
 
 #import "Course.h"
@@ -22,8 +21,10 @@
 -(NSString *)roleCall{
     
     // TODO: Complete this method
-    NSString *toReturn = @"";
-    
+    NSString *toReturn = @"Attendance";
+    for (Student *student in self.students ) {
+        toReturn = [NSString stringWithFormat:@"%@\n%@",toReturn,student];
+    }
     
 
     return toReturn;
